@@ -2,16 +2,6 @@
 
 React Native [InteractionManager](https://facebook.github.io/react-native/docs/interactionmanager.html) helpers.
 
-## Installation
-
-```sh
-npm i --save react-native-interactions
-```
-
-## AfterInteractions
-
-React component that only renders `children` after `InteractionManager.runAfterInteractions()`.
-
 ```javascript
 import {AfterInteractions} from 'react-native-interactions';
 
@@ -24,12 +14,22 @@ function MyComponent() {
 }
 ```
 
+## Installation
+
+```sh
+npm i --save react-native-interactions
+```
+
+## AfterInteractions
+
+React component that only renders `children` after `InteractionManager.runAfterInteractions()`.
+
 Props:
 
 | prop                | type          | default | description                                |
 |---------------------|---------------|---------|--------------------------------------------|
-| `placeholder`       | react element | null    | (optional) prerendered placeholder content |
-| `renderPlaceholder` | function      | null    | (optional) placeholder renderer            |
+| `placeholder`       | react element | `null`  | (optional) prerendered placeholder content |
+| `renderPlaceholder` | function      | `null`  | (optional) placeholder renderer            |
 
 ## renderAfterInteractions
 
