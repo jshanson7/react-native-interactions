@@ -3,23 +3,25 @@ import AfterInteractions from './after-interactions';
 
 const defaults = {
   placeholder: null,
-  renderPlaceholder: null,
-  inheritStaticProps: true
+  renderPlaceholder: null
 };
 
-export default function renderAfterInteractions(optionsOrComponent) {
-  if (typeof optionsOrComponent === 'function') {
+export default function renderAfterInteractions(options) {
+  if (typeof options === 'function') {
     // only component provided
-    return renderAfterInteractions()(optionsOrComponent);
+    return renderAfterInteractions()(options);
   }
 
-  const {
-    placeholder,
-    renderPlaceholder,
-    inheritStaticProps
-  } = {...defaults, ...optionsOrComponent};
-
   return ExpensiveComponent => {
+    const {
+      placeholder,
+      renderPlaceholder
+    } = {
+      ...defaults,
+      ...ExpensiveComponent,
+      ...options
+    };
+
     function WrappedComponent(props) {
       return (
         <AfterInteractions placeholder={placeholder} renderPlaceholder={renderPlaceholder}>
@@ -28,9 +30,7 @@ export default function renderAfterInteractions(optionsOrComponent) {
       );
     }
 
-    if (inheritStaticProps) {
-      Object.assign(WrappedComponent, ExpensiveComponent);
-    }
+    Object.assign(WrappedComponent, ExpensiveComponent);
 
     return WrappedComponent;
   };
