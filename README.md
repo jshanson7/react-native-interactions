@@ -7,7 +7,7 @@ import {AfterInteractions} from 'react-native-interactions';
 
 function MyComponent() {
   return (
-    <AfterInteractions placeholder={<CheapPlaceholder/>}>
+    <AfterInteractions>
       <ExpensiveComponent/>
     </AfterInteractions>
   );
