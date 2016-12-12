@@ -1,2 +1,2 @@
-export {default as AfterInteractions} from './after-interactions';
-export {default as renderAfterInteractions} from './render-after-interactions';
+export AfterInteractions from './after-interactions';
+export renderAfterInteractions from './render-after-interactions';
