@@ -24,6 +24,10 @@ npm i --save react-native-interactions
 
 React component that only renders `children` after `InteractionManager.runAfterInteractions()`.
 
+```javascript
+import {AfterInteractions} from 'react-native-interactions';
+```
+
 Props:
 
 | prop                | type          | default | description                                |
@@ -42,14 +46,20 @@ import {renderAfterInteractions} from 'react-native-interactions';
 export default class ExpensiveComponent extends Component {
   // expensive stuff
 }
+```
 
-// or:
+or:
+
+```javascript
 @renderAfterInteractions({placeholder: <CheapPlaceholder/>})
 export default class ExpensiveComponent extends Component {
   // expensive stuff
 }
+```
 
-// or:
+or:
+
+```javascript
 class ExpensiveComponent extends Component {
   // expensive stuff
 }
