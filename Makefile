@@ -23,7 +23,7 @@ publish:
 lib/%.js: src/%.js
 	@echo "building $@"
 	@mkdir -p $(@D)
-	@$(BIN)/babel --source-maps-inline -o $@ $<
+	@$(BIN)/babel --presets=latest,react,stage-2 --source-maps-inline -o $@ $<
 
 clean:
 	@rm -rf lib/
