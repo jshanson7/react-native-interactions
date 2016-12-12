@@ -1,6 +1,6 @@
 {
   "name": "react-native-interactions",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React Native InteractionManager helpers",
   "main": "lib/index.js",
   "scripts": {
