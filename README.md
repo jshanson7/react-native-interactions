@@ -22,10 +22,18 @@ npm i --save react-native-interactions
 
 ## AfterInteractions
 
-React component that only renders `children` after `InteractionManager.runAfterInteractions()`.  Wrap top-level [`Navigator`](http://facebook.github.io/react-native/docs/navigator.html) scenes with `AfterInteractions` so they animate perfomantly when pushed.
+Component that only renders `children` after `InteractionManager.runAfterInteractions()`.  Wrap top-level [`Navigator`](http://facebook.github.io/react-native/docs/navigator.html) scenes with this component so that they animate perfomantly when pushed.
 
 ```javascript
 import {AfterInteractions} from 'react-native-interactions';
+
+function MyScene() {
+  return (
+    <AfterInteractions placeholder={<CheapPlaceholder/>}>
+      <ExpensiveComponent/>
+    </AfterInteractions>
+  );
+}
 ```
 
 Props:
