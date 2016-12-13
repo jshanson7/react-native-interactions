@@ -1,4 +1,4 @@
-import hoistNonReactStatics from 'hoist-non-react-statics'
+import hoistNonReactStatics from 'hoist-non-react-statics';
 import React from 'react';
 import AfterInteractions from './after-interactions';
 
