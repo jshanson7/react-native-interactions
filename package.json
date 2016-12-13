@@ -9,6 +9,9 @@
   },
   "author": "Jeff Hanson",
   "license": "MIT",
+  "dependencies": {
+    "hoist-non-react-statics": "^1.2.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.18.0",
     "babel-eslint": "^7.1.1",
@@ -35,8 +38,5 @@
     "native",
     "InteractionManager",
     "runAfterInteractions"
-  ],
-  "dependencies": {
-    "hoist-non-react-statics": "^1.2.0"
-  }
+  ]
 }
