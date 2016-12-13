@@ -53,7 +53,7 @@ Same as `AfterInteractions` component, but in the form of a decorator.
 import {renderAfterInteractions} from 'react-native-interactions';
 
 @renderAfterInteractions
-export default class ExpensiveComponent extends Component {
+class ExpensiveComponent extends Component {
   static placeholder = <CheapPlaceholder/>;
 
   render() {
@@ -66,7 +66,7 @@ or:
 
 ```javascript
 @renderAfterInteractions({placeholder: <CheapPlaceholder/>})
-export default class ExpensiveComponent extends Component {
+class ExpensiveComponent extends Component {
   // expensive stuff
 }
 ```
