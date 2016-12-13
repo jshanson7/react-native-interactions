@@ -1,7 +1,9 @@
+import hoistNonReactStatics from 'hoist-non-react-statics'
 import React from 'react';
 import AfterInteractions from './after-interactions';
 
 const defaults = {
+  hoistStatics: true,
   placeholder: null,
   renderPlaceholder: null
 };
@@ -14,8 +16,9 @@ export default function renderAfterInteractions(options) {
 
   return ExpensiveComponent => {
     const {
-      placeholder,
-      renderPlaceholder
+      hoistStatics,
+      renderPlaceholder,
+      placeholder
     } = {
       ...defaults,
       ...ExpensiveComponent,
@@ -30,7 +33,9 @@ export default function renderAfterInteractions(options) {
       );
     }
 
-    Object.assign(WrappedComponent, ExpensiveComponent);
+    if (hoistStatics) {
+      hoistNonReactStatics(WrappedComponent, ExpensiveComponent);
+    }
 
     return WrappedComponent;
   };
