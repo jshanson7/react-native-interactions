@@ -16,10 +16,19 @@ export default class AfterInteractions extends Component {
 
   state = {interactionsComplete: false};
 
+  interactionHandle = null;
+
   componentDidMount() {
-    InteractionManager.runAfterInteractions(() => {
+    this.interactionHandle = InteractionManager.runAfterInteractions(() => {
       this.setState({interactionsComplete: true});
+      this.interactionHandle = null;
     });
+  }
+
+  componentWillUnmount() {
+    if (this.interactionHandle) {
+      this.interactionHandle.cancel();
+    }
   }
 
   render() {
