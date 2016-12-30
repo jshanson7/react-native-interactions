@@ -1,5 +1,7 @@
 # React Native Interactions [![NPM version][npm-image]][npm-url]
 
+![Demo](demo.gif)
+
 React Native [InteractionManager](https://facebook.github.io/react-native/docs/interactionmanager.html) helpers.
 
 ```javascript
