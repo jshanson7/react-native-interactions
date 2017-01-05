@@ -56,6 +56,7 @@ import {renderAfterInteractions} from 'react-native-interactions';
 
 @renderAfterInteractions
 class ExpensiveComponent extends Component {
+
   static placeholder = <CheapPlaceholder/>;
 
   render() {
