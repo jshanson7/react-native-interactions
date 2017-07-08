@@ -10,7 +10,8 @@
   "author": "Jeff Hanson",
   "license": "MIT",
   "dependencies": {
-    "hoist-non-react-statics": "^1.2.0"
+    "hoist-non-react-statics": "^1.2.0",
+    "prop-types": "^15.5.10"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
